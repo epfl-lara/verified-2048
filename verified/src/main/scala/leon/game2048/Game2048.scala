@@ -1,11 +1,8 @@
 package leon.game2048
 
-import leon.lang._
-import leon.lang.Bag
-import leon.annotation._
-import leon.lang.StaticChecks._
-
-import leon.util.Random
+import stainless.lang._
+import stainless.util.Random
+import stainless.lang.StaticChecks._
 
 object Game2048 {
 
@@ -171,7 +168,7 @@ object Game2048 {
       res
     } ensuring(res => res >= n && res < 16)
 
-    @ignore
+    //@ignore
     def cells: Vector[Cell] = Vector(c11, c12, c13, c14,
                                      c21, c22, c23, c24,
                                      c31, c32, c33, c34,
@@ -358,7 +355,7 @@ object Game2048 {
     require(map.existsEmptyCell && (v == 2 || v == 4))
 
     val nbEmptyCells = map.nbEmptyCells
-    val randomIndex = leon.util.Random.nextBigInt(nbEmptyCells)
+    val randomIndex = Random.nextBigInt(nbEmptyCells)
     val realIndex = map.nthFree(randomIndex)
 
     if(realIndex == 0) {
@@ -411,7 +408,7 @@ object Game2048 {
 
   def popNumber(m: LevelMap)(implicit state: Random.State): Unit = {
     require(m.existsEmptyCell)
-    val value: BigInt = 2*(1+leon.util.Random.nextBigInt(2))
+    val value: BigInt = 2*(1+Random.nextBigInt(2))
     setRandomCell(m, value)
   }
 

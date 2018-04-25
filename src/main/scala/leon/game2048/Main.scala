@@ -1,17 +1,17 @@
 package leon.game2048
 
-import scala.scalajs.js.JSApp
 import scala.scalajs.js.annotation.JSExport
+import scala.scalajs.js.annotation.JSExportTopLevel
 
 import org.scalajs.dom
 import dom.document
 import dom.html
 
-import leon.lang._
-import leon.util.Random
-import leon.lang.StaticChecks._
+import stainless.lang._
+import stainless.util.Random
+import stainless.io.StdOut.println
 
-@JSExport
+@JSExportTopLevel("leon.game2048.Main")
 object Main {
 
   import Game2048._
