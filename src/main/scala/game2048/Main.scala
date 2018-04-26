@@ -1,19 +1,17 @@
-package leon.game2048
+package game2048
+
+import org.scalajs.dom
+import org.scalajs.dom.document
+import org.scalajs.dom.html
+import stainless.io.StdOut.println
+import stainless.lang._
+import stainless.util.Random
 
 import scala.scalajs.js.annotation.JSExport
 import scala.scalajs.js.annotation.JSExportTopLevel
 
-import org.scalajs.dom
-import dom.document
-import dom.html
-
-import stainless.lang._
-import stainless.util.Random
-import stainless.io.StdOut.println
-
-@JSExportTopLevel("leon.game2048.Main")
+@JSExportTopLevel("game2048.Main")
 object Main {
-
   import Game2048._
  
   type Ctx2D = dom.CanvasRenderingContext2D

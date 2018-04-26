@@ -1,8 +1,10 @@
-package leon.game2048
+package game2048
 
+import stainless.annotation.extern
+import stainless.collection.List
 import stainless.lang._
-import stainless.util.Random
 import stainless.lang.StaticChecks._
+import stainless.util.Random
 
 object Game2048 {
 
@@ -168,8 +170,8 @@ object Game2048 {
       res
     } ensuring(res => res >= n && res < 16)
 
-    //@ignore
-    def cells: Vector[Cell] = Vector(c11, c12, c13, c14,
+    @extern
+    def cells: List[Cell] = List(c11, c12, c13, c14,
                                      c21, c22, c23, c24,
                                      c31, c32, c33, c34,
                                      c41, c42, c43, c44)

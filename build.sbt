@@ -3,7 +3,7 @@ lazy val root = (project in file("."))
   .dependsOn(verified)
   .settings(commonSettings)
   .settings(
-    name := "2048",
+    name := "verified-2048",
     libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.9.5"
   )
 
