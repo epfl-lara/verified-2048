@@ -1,9 +1,16 @@
-enablePlugins(ScalaJSPlugin)
+lazy val root = (project in file("."))
+  .enablePlugins(ScalaJSPlugin)
+  .dependsOn(verified)
+  .settings(commonSettings)
+  .settings(
+    name := "verified-2048",
+    libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.9.5"
+  )
 
-name := "Leon-2048"
+lazy val verified = (project in file("verified"))
+  .enablePlugins(StainlessPlugin, ScalaJSPlugin)
+  .settings(commonSettings)
 
-scalaVersion := "2.11.7"
-
-libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.9.0"
-
-unmanagedSourceDirectories in Compile += (baseDirectory / "../../library/leon/").value
+def commonSettings = Seq(
+  scalaVersion := "2.11.8"
+)
