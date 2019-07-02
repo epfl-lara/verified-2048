@@ -10,7 +10,7 @@ import stainless.util.Random
 import scala.scalajs.js.annotation.JSExport
 import scala.scalajs.js.annotation.JSExportTopLevel
 
-@JSExportTopLevel("game2048.Main")
+@JSExportTopLevel("Main")
 object Main {
   import Game2048._
  

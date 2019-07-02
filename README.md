@@ -7,10 +7,10 @@ the game [here](https://epfl-lara.github.io/verified-2048/).
 
 # Running locally
 
-Simply execute `sbt fastOptJS` to produce the Javascript output needed to play the game. This will also run the stainless verification.
+Simply execute `sbt fullOptJS` to produce the Javascript output needed to play the game. This will also run the stainless verification.
 
 ```
-$ sbt fastOptJS
+$ sbt fullOptJS
 [info] Loading global plugins from /Users/mirco/.sbt/0.13/plugins
 [info] Loading project definition from /Users/mirco/Projects/oos/verified-2048/project
 [info] Set current project to verified-2048 (in build file:/Users/mirco/Projects/oos/verified-2048/)

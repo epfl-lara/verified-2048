@@ -1,3 +1,8 @@
+
+lazy val commonSettings = Seq(
+  scalaVersion := "2.12.8"
+)
+
 lazy val root = (project in file("."))
   .enablePlugins(ScalaJSPlugin)
   .dependsOn(verified)
@@ -11,6 +16,3 @@ lazy val verified = (project in file("verified"))
   .enablePlugins(StainlessPlugin, ScalaJSPlugin)
   .settings(commonSettings)
 
-def commonSettings = Seq(
-  scalaVersion := "2.11.8"
-)
