@@ -4,7 +4,7 @@ resolvers ++= Seq(
   "uuverifiers" at "http://logicrunch.research.it.uu.se/maven",
 )
 
-val StainlessVersion = "0.2.2"
+val StainlessVersion = "0.3.0"
 
 addSbtPlugin("ch.epfl.lara" % "sbt-stainless" % StainlessVersion)
 
